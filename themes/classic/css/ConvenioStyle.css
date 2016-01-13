@@ -1,0 +1,72 @@
+
+#OpcionesUser li a{
+	color: white;
+}
+a#fecha{
+	font-size: 1.2em;
+}
+a#fecha:hover{
+   background-color: #1b325f;
+   color: white;	
+}
+footer#foo.container-fluid{
+	background-color: #1b325f;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+h1{	
+	/*color: #293F83;*/
+	color:#1b325f;
+}
+header{
+	background: url("../img/CabeceraA.png") no-repeat;
+	padding-bottom: 1em;	
+}
+img#manos, img#siglas{
+	display: block;
+    max-width: 100%;
+   height: auto;
+}
+section#OpcionesUser{
+	background: #1b325f;	
+}
+nav#menuPrincipal{
+	background: #4c7eb1;
+}
+nav#menuPrincipal .icon-bar{
+	background-color: #3fb8af;
+}
+nav#menuPrincipal  li a {
+	color: white;
+	font-size: 1em;
+}
+nav#menuPrincipal li a:hover{
+	color: #1b325f;
+	background-color:#3FB8AF;	 
+}
+nav#menuPrincipal li a span{
+	color: #1b325f; 
+}
+
+@media screen and (max-width: 500px){
+	a#fecha{
+	  font-size: 1em;
+    }
+	h1{
+		font-size: 1.2em; 
+	}
+	img#Logo{
+		max-width: 100%;
+		height: auto;
+	}
+	img#usuario{
+		width: 20px;
+		height: 20px;
+	}
+	.col-xs-2,.col-xs-6{
+		width: 33.33333333%; 
+	}
+	
+}
+
+
