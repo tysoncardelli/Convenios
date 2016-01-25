@@ -17,7 +17,22 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-		$users=array(
+
+		$conexion=Yii::app()->db;
+		$consulta="SELECT nombre, clave FROM usuario ";
+		$consulta .= "WHERE nombre='".$this->username."' AND ";
+		$consulta .="clave='".$this->password."'";
+
+		$resultado=$conexion->createCommand($consulta)->query();
+
+		$resultado->bindColumn(1,$this->username);
+		$resultado->bindColumn(2,$this->password);
+
+		while ($resultado->read()!==false) {
+			$this->errorCode =self::ERROR_NONE;
+			return !$this->errorCode;
+		}
+		/*$users=array(
 			// username => password
 			'demo'=>'demo',
 			'admin'=>'admin',
@@ -28,6 +43,6 @@ class UserIdentity extends CUserIdentity
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else
 			$this->errorCode=self::ERROR_NONE;
-		return !$this->errorCode;
+		return !$this->errorCode;*/
 	}
 }

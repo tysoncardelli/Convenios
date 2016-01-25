@@ -31,10 +31,6 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
 	}
-	public function actionInformacion()
-	{
-		$this->render('informacion');
-	}
 
 	/**
 	 * This is the action to handle external exceptions.
@@ -109,5 +105,9 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+
+	public function actionConfiguracion(){
+		$this->render('configuracion');
 	}
 }
